@@ -213,51 +213,55 @@
                     </div>
                 </div>
                 
-                <!-- Animación de escala de justicia -->
+                <!-- Imagen profesional -->
                 <div class="hidden lg:flex justify-center items-center">
-                    <div class="justice-scale-container">
-                        <svg class="justice-scale" width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Pilar central -->
-                            <rect class="scale-pillar" x="145" y="80" width="10" height="180" rx="5" fill="currentColor" opacity="0.9"/>
-                            
-                            <!-- Base -->
-                            <ellipse class="scale-base" cx="150" cy="265" rx="60" ry="8" fill="currentColor" opacity="0.7"/>
-                            
-                            <!-- Barra horizontal -->
-                            <line class="scale-beam" x1="60" y1="100" x2="240" y2="100" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
-                            
-                            <!-- Plato izquierdo -->
-                            <g class="scale-left-plate">
-                                <line x1="80" y1="100" x2="80" y2="140" stroke="currentColor" stroke-width="2"/>
-                                <ellipse cx="80" cy="145" rx="35" ry="6" fill="currentColor" opacity="0.3"/>
-                                <path d="M 45 145 Q 45 155, 80 157 Q 115 155, 115 145 Z" fill="currentColor" opacity="0.6"/>
-                            </g>
-                            
-                            <!-- Plato derecho -->
-                            <g class="scale-right-plate">
-                                <line x1="220" y1="100" x2="220" y2="140" stroke="currentColor" stroke-width="2"/>
-                                <ellipse cx="220" cy="145" rx="35" ry="6" fill="currentColor" opacity="0.3"/>
-                                <path d="M 185 145 Q 185 155, 220 157 Q 255 155, 255 145 Z" fill="currentColor" opacity="0.6"/>
-                            </g>
-                            
-                            <!-- Punto de equilibrio superior -->
-                            <circle class="scale-pivot" cx="150" cy="100" r="8" fill="currentColor"/>
-                            
-                            <!-- Detalles decorativos -->
-                            <circle class="scale-detail" cx="150" cy="75" r="6" fill="currentColor" opacity="0.8"/>
-                            <path class="scale-top" d="M 150 50 L 145 75 L 155 75 Z" fill="currentColor"/>
-                        </svg>
+                    <div class="relative hero-image-container">
+                        <!-- Imagen principal -->
+                        <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+                            <img 
+                                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=600&fit=crop&q=80" 
+                                alt="Profesionales de Delavalle Asesores en reunión estratégica"
+                                class="hero-image w-full h-auto object-cover"
+                                loading="eager"
+                            />
+                            <!-- Overlay sutil -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent"></div>
+                        </div>
                         
-                        <!-- Elementos flotantes decorativos -->
-                        <div class="floating-elements">
-                            <div class="float-element" style="top: 20%; left: 10%;">
-                                <i data-lucide="shield-check" class="w-8 h-8 text-primary-600 dark:text-gold-400 opacity-60"></i>
+                        <!-- Elementos decorativos flotantes -->
+                        <div class="floating-badge badge-1">
+                            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                                    <i data-lucide="shield-check" class="w-5 h-5 text-green-600 dark:text-green-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">Garantía</p>
+                                    <p class="text-sm font-bold text-gray-900 dark:text-white">100% Confiable</p>
+                                </div>
                             </div>
-                            <div class="float-element" style="top: 60%; right: 10%; animation-delay: 1s;">
-                                <i data-lucide="award" class="w-8 h-8 text-primary-600 dark:text-gold-400 opacity-60"></i>
+                        </div>
+                        
+                        <div class="floating-badge badge-2">
+                            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center">
+                                    <i data-lucide="award" class="w-5 h-5 text-primary-700 dark:text-gold-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">Experiencia</p>
+                                    <p class="text-sm font-bold text-gray-900 dark:text-white">+15 Años</p>
+                                </div>
                             </div>
-                            <div class="float-element" style="top: 40%; left: 5%; animation-delay: 2s;">
-                                <i data-lucide="file-check" class="w-6 h-6 text-primary-600 dark:text-gold-400 opacity-60"></i>
+                        </div>
+                        
+                        <div class="floating-badge badge-3">
+                            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                                    <i data-lucide="users" class="w-5 h-5 text-blue-600 dark:text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">Clientes</p>
+                                    <p class="text-sm font-bold text-gray-900 dark:text-white">+500 Satisfechos</p>
+                                </div>
                             </div>
                         </div>
                     </div>

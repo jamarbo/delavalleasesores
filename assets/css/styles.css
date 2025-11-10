@@ -94,149 +94,100 @@ html {
 }
 
 /* ========================================
-   Animación de Escala de Justicia
+   Imagen Hero con animaciones profesionales
    ======================================== */
-.justice-scale-container {
+.hero-image-container {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    max-width: 500px;
+    animation: imageReveal 1s ease-out;
 }
 
-.justice-scale {
-    color: #334155;
-    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
-    animation: scaleReveal 1.2s ease-out;
-}
-
-.dark .justice-scale {
-    color: #fbbf24;
-}
-
-/* Animación de revelación inicial */
-@keyframes scaleReveal {
+@keyframes imageReveal {
     0% {
         opacity: 0;
-        transform: translateY(30px) scale(0.9);
+        transform: scale(0.95) translateY(20px);
     }
     100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        transform: scale(1) translateY(0);
     }
 }
 
-/* Animación sutil de balanceo de la balanza */
-@keyframes scaleBalance {
-    0%, 100% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-1deg);
-    }
-    75% {
-        transform: rotate(1deg);
-    }
-}
-
-.scale-beam {
-    transform-origin: center;
-    animation: scaleBalance 4s ease-in-out infinite;
-    animation-delay: 1.2s;
-}
-
-/* Animación de los platos oscilando suavemente */
-@keyframes plateFloat {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-3px);
-    }
-}
-
-.scale-left-plate {
-    animation: plateFloat 3s ease-in-out infinite;
-    animation-delay: 0.5s;
-}
-
-.scale-right-plate {
-    animation: plateFloat 3s ease-in-out infinite;
-    animation-delay: 1.5s;
-}
-
-/* Animación del pilar con efecto de crecimiento */
-@keyframes pillarGrow {
-    0% {
-        transform: scaleY(0);
-        transform-origin: bottom;
-    }
-    100% {
-        transform: scaleY(1);
-        transform-origin: bottom;
-    }
-}
-
-.scale-pillar {
-    animation: pillarGrow 0.8s ease-out;
-}
-
-/* Pulso sutil en el pivote */
-@keyframes pivotPulse {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 0.9;
-    }
-    50% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-}
-
-.scale-pivot {
-    animation: pivotPulse 2s ease-in-out infinite;
-    animation-delay: 1.5s;
-}
-
-/* Animación de la punta superior */
-@keyframes topShine {
-    0%, 100% {
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 1;
-        filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.4));
-    }
-}
-
-.scale-top {
-    animation: topShine 3s ease-in-out infinite;
-}
-
-/* ========================================
-   Elementos flotantes decorativos
-   ======================================== */
-.floating-elements {
-    position: absolute;
-    top: 0;
-    left: 0;
+.hero-image {
     width: 100%;
-    height: 100%;
-    pointer-events: none;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+    transition: transform 0.5s ease;
 }
 
-.float-element {
+.hero-image:hover {
+    transform: scale(1.02);
+}
+
+/* Badges flotantes con estadísticas */
+.floating-badge {
     position: absolute;
-    animation: floatElement 6s ease-in-out infinite;
+    animation: badgeFloat 6s ease-in-out infinite;
+    z-index: 10;
 }
 
-@keyframes floatElement {
+.badge-1 {
+    top: 10%;
+    right: -10%;
+    animation-delay: 0s;
+}
+
+.badge-2 {
+    bottom: 15%;
+    left: -15%;
+    animation-delay: 2s;
+}
+
+.badge-3 {
+    top: 50%;
+    right: -5%;
+    animation-delay: 4s;
+}
+
+@keyframes badgeFloat {
     0%, 100% {
         transform: translateY(0px) rotate(0deg);
-        opacity: 0.4;
+        opacity: 0.95;
     }
     50% {
-        transform: translateY(-20px) rotate(5deg);
-        opacity: 0.7;
+        transform: translateY(-15px) rotate(2deg);
+        opacity: 1;
     }
+}
+
+/* Animación de revelación de badges */
+.floating-badge {
+    animation: badgeFloat 6s ease-in-out infinite, badgeReveal 0.8s ease-out backwards;
+}
+
+@keyframes badgeReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(20px);
+    }
+    100% {
+        opacity: 0.95;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.badge-1 {
+    animation-delay: 0.3s, 0.5s;
+}
+
+.badge-2 {
+    animation-delay: 2s, 0.7s;
+}
+
+.badge-3 {
+    animation-delay: 4s, 0.9s;
 }
 
 /* ========================================

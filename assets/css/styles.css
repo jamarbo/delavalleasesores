@@ -151,6 +151,40 @@ html {
     animation-delay: 4s;
 }
 
+/* Ajustes responsive para badges en mobile */
+@media (max-width: 1024px) {
+    .badge-1 {
+        top: 5%;
+        right: 2%;
+    }
+    
+    .badge-2 {
+        bottom: 5%;
+        left: 2%;
+    }
+    
+    .badge-3 {
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+    }
+    
+    .floating-badge {
+        animation: badgeFloatMobile 6s ease-in-out infinite;
+    }
+}
+
+@keyframes badgeFloatMobile {
+    0%, 100% {
+        transform: translateY(0px);
+        opacity: 0.95;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
 @keyframes badgeFloat {
     0%, 100% {
         transform: translateY(0px) rotate(0deg);

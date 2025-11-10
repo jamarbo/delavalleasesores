@@ -61,17 +61,6 @@ html {
 }
 
 /* ========================================
-   Tarjetas de servicio con hover effect
-   ======================================== */
-.service-card {
-    @apply transition-all duration-300;
-}
-
-.service-card:hover {
-    @apply transform -translate-y-1;
-}
-
-/* ========================================
    Animaciones personalizadas
    ======================================== */
 @keyframes fadeIn {
@@ -98,6 +87,204 @@ html {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+}
+
+/* ========================================
+   Animación de Escala de Justicia
+   ======================================== */
+.justice-scale-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.justice-scale {
+    color: #334155;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.1));
+    animation: scaleReveal 1.2s ease-out;
+}
+
+.dark .justice-scale {
+    color: #fbbf24;
+}
+
+/* Animación de revelación inicial */
+@keyframes scaleReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Animación sutil de balanceo de la balanza */
+@keyframes scaleBalance {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-1deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+}
+
+.scale-beam {
+    transform-origin: center;
+    animation: scaleBalance 4s ease-in-out infinite;
+    animation-delay: 1.2s;
+}
+
+/* Animación de los platos oscilando suavemente */
+@keyframes plateFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.scale-left-plate {
+    animation: plateFloat 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.scale-right-plate {
+    animation: plateFloat 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+/* Animación del pilar con efecto de crecimiento */
+@keyframes pillarGrow {
+    0% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+    100% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+}
+
+.scale-pillar {
+    animation: pillarGrow 0.8s ease-out;
+}
+
+/* Pulso sutil en el pivote */
+@keyframes pivotPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.9;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+.scale-pivot {
+    animation: pivotPulse 2s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+/* Animación de la punta superior */
+@keyframes topShine {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.4));
+    }
+}
+
+.scale-top {
+    animation: topShine 3s ease-in-out infinite;
+}
+
+/* ========================================
+   Elementos flotantes decorativos
+   ======================================== */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.float-element {
+    position: absolute;
+    animation: floatElement 6s ease-in-out infinite;
+}
+
+@keyframes floatElement {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+        opacity: 0.7;
+    }
+}
+
+/* ========================================
+   Animación de entrada del contenido hero
+   ======================================== */
+.hero-content {
+    animation: heroSlideIn 0.8s ease-out;
+}
+
+@keyframes heroSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========================================
+   Animación de las tarjetas de servicio al aparecer
+   ======================================== */
+.service-card {
+    @apply transition-all duration-300;
+    animation: cardFadeIn 0.6s ease-out backwards;
+}
+
+@keyframes cardFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
+
+.service-card:hover {
+    @apply transform -translate-y-1;
 }
 
 .slide-in-right {

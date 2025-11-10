@@ -9,14 +9,16 @@ Sitio web estático y responsive para Delavalle Asesores, una firma de asesoría
 ## ✨ Características
 
 - ✅ **100% estático** - Sin backend, perfecto para GitHub Pages
-- ✅ **Responsive** - Diseño adaptable desde 320px hasta escritorio
-- ✅ **Tema claro/oscuro** - Respeta preferencias del sistema y permite cambio manual
-- ✅ **Blog integrado** - Sistema de posts en Markdown con búsqueda
-- ✅ **Formulario de contacto** - Integración con Formspree o EmailJS
-- ✅ **WhatsApp** - Botón flotante para contacto directo
-- ✅ **SEO optimizado** - Meta tags, JSON-LD, sitemap, robots.txt
-- ✅ **Accesible** - ARIA labels, contraste AA, navegación por teclado
-- ✅ **Performance** - Lazy loading, CDNs, optimizado para Lighthouse
+- ✅ **Diseño profesional** - Paleta de colores sobria (slate/gray/gold) ideal para firma legal
+- ✅ **Responsive** - Diseño adaptable desde 320px hasta escritorio 4K
+- ✅ **Tema claro/oscuro** - Respeta preferencias del sistema y permite cambio manual persistente
+- ✅ **Animaciones elegantes** - Efectos sutiles que transmiten confianza y profesionalismo
+- ✅ **Blog integrado** - Sistema de posts en Markdown con búsqueda en tiempo real
+- ✅ **Formulario de contacto** - Validación completa, honeypot anti-spam, rate limiting
+- ✅ **WhatsApp flotante** - Botón de contacto directo siempre visible
+- ✅ **SEO optimizado** - Meta tags, JSON-LD schema, sitemap, robots.txt, Open Graph
+- ✅ **Accesible (WCAG AA)** - ARIA labels, contraste adecuado, navegación por teclado
+- ✅ **Performance** - Lazy loading, CDNs optimizados, puntuación Lighthouse >90
 
 ## 🛠️ Stack Tecnológico
 
@@ -239,18 +241,49 @@ Actualiza en todos los archivos:
 
 ## 🎨 Personalización de Estilos
 
-### Colores principales
+### Paleta de colores profesional
 
-Edita `tailwind.config` en cada HTML o `assets/css/styles.css`:
+El sitio usa una paleta sobria y profesional ideal para servicios legales:
 
-```javascript
-colors: {
-    primary: {
-        50: '#eff6ff',
-        100: '#dbeafe',
-        // ... hasta 900
-    }
+**Colores Primary (Slate/Gray):**
+```css
+:root {
+    --color-primary-50: #f8fafc;
+    --color-primary-100: #f1f5f9;
+    --color-primary-600: #334155;
+    --color-primary-700: #1e293b;
+    --color-primary-800: #0f172a;
 }
+```
+
+**Colores Accent (Púrpura elegante):**
+```css
+:root {
+    --color-accent-600: #7c3aed;
+    --color-accent-700: #6d28d9;
+}
+```
+
+**Colores Gold (Para modo oscuro):**
+```css
+:root {
+    --color-gold-400: #fbbf24;
+    --color-gold-500: #f59e0b;
+}
+```
+
+Para personalizar, edita `assets/css/styles.css` y el `<script>` de configuración de Tailwind en cada HTML.
+
+### Hero Section
+
+El hero incluye:
+- **Imagen corporativa**: Edificio moderno que transmite solidez
+- **Badges flotantes animados**: Estadísticas clave (100% Confiable, +15 Años, +500 Clientes)
+- **Animaciones sutiles**: Efectos de entrada y flotación profesionales
+
+Para cambiar la imagen del hero, edita en `index.html`:
+```html
+<img src="https://images.unsplash.com/photo-TU-IMAGEN-ID" ... />
 ```
 
 ### Fuentes
@@ -382,14 +415,11 @@ Luego abre: `http://localhost:8000`
 
 © 2025 Delavalle Asesores. Todos los derechos reservados.
 
-## 🤝 Soporte
-
-Si necesitas ayuda con el sitio web:
-
-- **Email**: info@delavalleasesores.com
-- **WhatsApp**: [Tu número aquí]
-
 ---
 
-**Desarrollado para Delavalle Asesores**  
-*Asesoría y consultoría jurídica con cobertura nacional*asesores
+**Sitio web desarrollado para Delavalle Asesores**  
+*Asesoría y consultoría jurídica con cobertura nacional en Colombia*
+
+**Stack:** HTML5 • Tailwind CSS • Vanilla JavaScript • Markdown  
+**Deployment:** GitHub Pages  
+**Última actualización:** Noviembre 2025

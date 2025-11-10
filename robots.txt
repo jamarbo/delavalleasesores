@@ -1,0 +1,19 @@
+# robots.txt - Control de rastreo para motores de búsqueda
+# Permite el rastreo completo del sitio
+
+User-agent: *
+Allow: /
+
+# Archivos específicos
+Allow: /index.html
+Allow: /acerca.html
+Allow: /servicios.html
+Allow: /blog.html
+Allow: /contacto.html
+Allow: /posts/
+
+# Recursos
+Allow: /assets/
+
+# Sitemap
+Sitemap: https://jamarbo.github.io/delavalleasesores/sitemap.xml

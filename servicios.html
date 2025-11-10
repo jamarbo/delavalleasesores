@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Servicios jurídicos integrales - Derecho Empresarial, Laboral, Civil, Penal, Administrativo e Inmobiliario con cobertura nacional.">
+    <meta name="keywords" content="servicios jurídicos, abogados, derecho empresarial, derecho laboral, derecho civil">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jamarbo.github.io/delavalleasesores/servicios.html">
+    <meta property="og:title" content="Servicios - Delavalle Asesores">
+    <meta property="og:description" content="Servicios jurídicos integrales con cobertura nacional">
+    
+    <title>Servicios - Delavalle Asesores</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://jamarbo.github.io/delavalleasesores/"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Servicios",
+            "item": "https://jamarbo.github.io/delavalleasesores/servicios.html"
+        }]
+    }
+    </script>
+</head>
+<body class="font-sans antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary-800 rounded-lg flex items-center justify-center">`n                        <span class="text-white font-bold text-xl">DA</span>
+                    </div>
+                    <span class="font-display text-xl font-bold text-primary-800 dark:text-gold-400">Delavalle Asesores</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="acerca.html" class="nav-link">Acerca de</a>
+                    <a href="servicios.html" class="nav-link text-primary-700 dark:text-gold-400 font-semibold">Servicios</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                    
+                    <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Cambiar tema">
+                        <i data-lucide="sun" class="w-5 h-5 dark:hidden"></i>
+                        <i data-lucide="moon" class="w-5 h-5 hidden dark:inline"></i>
+                    </button>
+                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Menú">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-700">
+                <div class="flex flex-col space-y-3 mt-4">
+                    <a href="index.html" class="nav-link-mobile">Inicio</a>
+                    <a href="acerca.html" class="nav-link-mobile">Acerca de</a>
+                    <a href="servicios.html" class="nav-link-mobile text-primary-700 dark:text-gold-400 font-semibold">Servicios</a>
+                    <a href="blog.html" class="nav-link-mobile">Blog</a>
+                    <a href="contacto.html" class="nav-link-mobile">Contacto</a>
+                    <button id="theme-toggle-mobile" class="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-left">
+                        <i data-lucide="sun" class="w-5 h-5 dark:hidden"></i>
+                        <i data-lucide="moon" class="w-5 h-5 hidden dark:inline"></i>
+                        <span>Cambiar tema</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Hero -->
+    <section class="pt-32 pb-16 px-4 bg-gradient-to-br from-gray-50 via-slate-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h1 class="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                Nuestros <span class="text-primary-700 dark:text-gold-400">Servicios</span>
+            </h1>
+            <p class="text-xl text-gray-700 dark:text-gray-300">
+                Soluciones jurídicas integrales adaptadas a tus necesidades
+            </p>
+        </div>
+    </section>
+    
+    <!-- Servicios Detallados -->
+    <section class="py-20 px-4 bg-white dark:bg-gray-900">
+        <div class="container mx-auto max-w-6xl">
+            
+            <!-- Servicio 1: Derecho Empresarial -->
+            <div class="mb-16">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 md:p-12">
+                    <div class="flex items-start mb-6">
+                        <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                            <i data-lucide="briefcase" class="w-8 h-8 text-primary-700 dark:text-gold-400"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-4">Derecho Empresarial</h2>
+                            <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                                Asesoría integral para empresas en todas las etapas de su ciclo de vida, desde la constitución hasta procesos de fusión y adquisición.
+                            </p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Constitución y estructuración de sociedades</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Elaboración y revisión de contratos comerciales</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Cumplimiento normativo y gobierno corporativo</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Fusiones, adquisiciones y reestructuraciones</span>
+                                </li>
+                            </ul>
+                            <a href="https://wa.me/57xxxxxxxxxx?text=Me%20interesa%20el%20servicio%20de%20Derecho%20Empresarial" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-primary-800 hover:bg-primary-900 text-white font-semibold rounded-full transition-all">
+                                <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                                Consultar por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Servicio 2: Derecho Laboral -->
+            <div class="mb-16">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 md:p-12">
+                    <div class="flex items-start mb-6">
+                        <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                            <i data-lucide="users" class="w-8 h-8 text-primary-700 dark:text-gold-400"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-4">Derecho Laboral</h2>
+                            <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                                Representación en conflictos laborales y asesoría en relaciones empleador-trabajador, protegiendo tus derechos e intereses.
+                            </p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Contratos laborales y reglamentos internos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Procesos disciplinarios y terminaciones laborales</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Negociaciones colectivas y sindicales</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Reclamaciones por acoso laboral y discriminación</span>
+                                </li>
+                            </ul>
+                            <a href="https://wa.me/57xxxxxxxxxx?text=Me%20interesa%20el%20servicio%20de%20Derecho%20Laboral" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-primary-800 hover:bg-primary-900 text-white font-semibold rounded-full transition-all">
+                                <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                                Consultar por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Servicio 3: Derecho Civil -->
+            <div class="mb-16">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 md:p-12">
+                    <div class="flex items-start mb-6">
+                        <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                            <i data-lucide="scale" class="w-8 h-8 text-primary-700 dark:text-gold-400"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-4">Derecho Civil</h2>
+                            <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                                Asesoría en asuntos civiles, familiares y patrimoniales con un enfoque humanizado y efectivo.
+                            </p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Divorcios y separaciones de bienes</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Sucesiones y testamentos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Responsabilidad civil y daños</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Contratos civiles y obligaciones</span>
+                                </li>
+                            </ul>
+                            <a href="https://wa.me/57xxxxxxxxxx?text=Me%20interesa%20el%20servicio%20de%20Derecho%20Civil" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-primary-800 hover:bg-primary-900 text-white font-semibold rounded-full transition-all">
+                                <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                                Consultar por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Servicio 4: Derecho Administrativo -->
+            <div class="mb-16">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 md:p-12">
+                    <div class="flex items-start mb-6">
+                        <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                            <i data-lucide="file-text" class="w-8 h-8 text-primary-700 dark:text-gold-400"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-4">Derecho Administrativo</h2>
+                            <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                                Representación ante entidades públicas y defensa de tus derechos frente a actuaciones administrativas.
+                            </p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Acciones de nulidad y restablecimiento del derecho</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Recursos contra actos administrativos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Contratación estatal y licitaciones</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Procesos disciplinarios y sancionatorios</span>
+                                </li>
+                            </ul>
+                            <a href="https://wa.me/57xxxxxxxxxx?text=Me%20interesa%20el%20servicio%20de%20Derecho%20Administrativo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-primary-800 hover:bg-primary-900 text-white font-semibold rounded-full transition-all">
+                                <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                                Consultar por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Servicio 5: Derecho Penal -->
+            <div class="mb-16">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 md:p-12">
+                    <div class="flex items-start mb-6">
+                        <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                            <i data-lucide="shield" class="w-8 h-8 text-primary-700 dark:text-gold-400"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-4">Derecho Penal</h2>
+                            <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                                Defensa penal especializada con representación en todas las etapas del proceso penal.
+                            </p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Defensa en investigaciones y juicios penales</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Representación de víctimas</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Habeas corpus y tutelas penales</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Recursos y apelaciones</span>
+                                </li>
+                            </ul>
+                            <a href="https://wa.me/57xxxxxxxxxx?text=Me%20interesa%20el%20servicio%20de%20Derecho%20Penal" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-primary-800 hover:bg-primary-900 text-white font-semibold rounded-full transition-all">
+                                <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                                Consultar por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Servicio 6: Derecho Inmobiliario -->
+            <div class="mb-16">
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 md:p-12">
+                    <div class="flex items-start mb-6">
+                        <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-xl flex items-center justify-center mr-6 flex-shrink-0">
+                            <i data-lucide="home" class="w-8 h-8 text-primary-700 dark:text-gold-400"></i>
+                        </div>
+                        <div>
+                            <h2 class="font-display text-3xl font-bold text-gray-900 dark:text-white mb-4">Derecho Inmobiliario</h2>
+                            <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                                Asesoría especializada en transacciones inmobiliarias y gestión de propiedades.
+                            </p>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Compraventa y promesas de compraventa</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Contratos de arrendamiento y desalojos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Propiedad horizontal y administración de copropiedades</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-primary-700 dark:text-gold-400 mr-3 mt-1 flex-shrink-0"></i>
+                                    <span class="text-gray-700 dark:text-gray-300">Estudios de títulos y saneamiento</span>
+                                </li>
+                            </ul>
+                            <a href="https://wa.me/57xxxxxxxxxx?text=Me%20interesa%20el%20servicio%20de%20Derecho%20Inmobiliario" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 bg-primary-800 hover:bg-primary-900 text-white font-semibold rounded-full transition-all">
+                                <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                                Consultar por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- Cobertura Nacional -->
+    <section class="py-20 px-4 bg-primary-50 dark:bg-gray-800">
+        <div class="container mx-auto max-w-4xl text-center">
+            <div class="w-20 h-20 bg-primary-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="map-pin" class="w-10 h-10 text-white"></i>
+            </div>
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                Atención Remota y Cobertura Nacional
+            </h2>
+            <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+                Ofrecemos servicios de asesoría jurídica en todo el territorio colombiano. 
+                Gracias a la tecnología, podemos atenderte de manera remota sin importar tu ubicación.
+            </p>
+            <p class="text-gray-600 dark:text-gray-400">
+                Consultas virtuales, seguimiento en línea y representación legal donde lo necesites.
+            </p>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="py-20 px-4 bg-primary-800 dark:bg-primary-800">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+                ¿Necesitas asesoría legal?
+            </h2>
+            <p class="text-xl text-primary-100 mb-8">
+                Agenda una consulta y te ayudaremos a resolver tu situación
+            </p>
+            <a href="contacto.html" class="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-gray-100 text-primary-800 font-semibold rounded-full transition-all transform hover:scale-105 shadow-lg">
+                <i data-lucide="calendar" class="w-5 h-5 mr-2"></i>
+                Agendar consulta
+            </a>
+        </div>
+    </section>
+    
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/57xxxxxxxxxx?text=Hola%20quiero%20una%20asesor%C3%ADa" target="_blank" rel="noopener noreferrer" id="whatsapp-float" class="fixed bottom-6 right-6 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-2xl transition-all transform hover:scale-110 z-40" aria-label="Contactar por WhatsApp">
+        <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
+    </a>
+    
+    <!-- Botón volver arriba -->
+    <button id="back-to-top" class="fixed bottom-24 right-6 w-12 h-12 bg-primary-800 hover:bg-primary-900 rounded-full flex items-center justify-center shadow-lg transition-all transform hover:scale-110 opacity-0 pointer-events-none z-40" aria-label="Volver arriba">
+        <i data-lucide="arrow-up" class="w-6 h-6 text-white"></i>
+    </button>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-black text-gray-300 py-12 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-primary-800 rounded-lg flex items-center justify-center">`n                        <span class="text-white font-bold text-xl">DA</span>
+                        </div>
+                        <span class="font-display text-xl font-bold text-white">Delavalle Asesores</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Asesoría y consultoría jurídica con cobertura nacional. Actuamos con integridad y transparencia.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/delavalle-asesores" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-primary-800 rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.instagram.com/delavalleasesores" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-primary-800 rounded-full flex items-center justify-center transition-colors" aria-label="Instagram">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@delavalleasesores" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-primary-800 rounded-full flex items-center justify-center transition-colors" aria-label="YouTube">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@delavalleasesores" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-primary-800 rounded-full flex items-center justify-center transition-colors" aria-label="TikTok">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>
+                        </a>
+                        <a href="https://github.com/jamarbo" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 hover:bg-primary-800 rounded-full flex items-center justify-center transition-colors" aria-label="GitHub">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-4">Enlaces rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-gold-400 transition-colors">Inicio</a></li>
+                        <li><a href="acerca.html" class="hover:text-gold-400 transition-colors">Acerca de</a></li>
+                        <li><a href="servicios.html" class="hover:text-gold-400 transition-colors">Servicios</a></li>
+                        <li><a href="blog.html" class="hover:text-gold-400 transition-colors">Blog</a></li>
+                        <li><a href="contacto.html" class="hover:text-gold-400 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold mb-4">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i data-lucide="mail" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i>
+                            <a href="mailto:info@delavalleasesores.com" class="hover:text-gold-400 transition-colors">info@delavalleasesores.com</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="phone" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>+57 (xxx) xxx-xxxx</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>Colombia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                    <p>&copy; <span id="current-year"></span> Delavalle Asesores. Todos los derechos reservados.</p>
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-gold-400 transition-colors">Política de privacidad</a>
+                        <a href="#" class="hover:text-gold-400 transition-colors">Términos de servicio</a>
+                        <a href="#" class="hover:text-gold-400 transition-colors">Aviso legal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+

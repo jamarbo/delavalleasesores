@@ -1,0 +1,66 @@
+{
+    "name": "Delavalle Asesores",
+    "short_name": "Delavalle",
+    "description": "Asesoría y consultoría jurídica con cobertura nacional",
+    "start_url": "/delavalleasesores/",
+    "scope": "/delavalleasesores/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2563eb",
+    "orientation": "portrait-primary",
+    "lang": "es-CO",
+    "dir": "ltr",
+    "icons": [
+        {
+            "src": "/delavalleasesores/assets/img/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/delavalleasesores/assets/img/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["business", "legal", "professional"],
+    "shortcuts": [
+        {
+            "name": "Contacto",
+            "short_name": "Contacto",
+            "description": "Contactar a Delavalle Asesores",
+            "url": "/delavalleasesores/contacto.html",
+            "icons": [
+                {
+                    "src": "/delavalleasesores/assets/img/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Servicios",
+            "short_name": "Servicios",
+            "description": "Ver servicios jurídicos",
+            "url": "/delavalleasesores/servicios.html",
+            "icons": [
+                {
+                    "src": "/delavalleasesores/assets/img/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Blog",
+            "short_name": "Blog",
+            "description": "Leer artículos jurídicos",
+            "url": "/delavalleasesores/blog.html",
+            "icons": [
+                {
+                    "src": "/delavalleasesores/assets/img/icon-192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ]
+}

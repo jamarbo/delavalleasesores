@@ -248,9 +248,18 @@
                     </div>
                     <h3 class="font-bold text-xl text-gray-900 dark:text-white mb-2">Dra. Alexis De Lavalle Mazri</h3>
                     <p class="text-primary-700 dark:text-gold-400 font-semibold mb-3">Directora General</p>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                        Abogada egresada de la Universidad Externado de Colombia, con sólida trayectoria técnica y jurídica en el ámbito asegurador, enfocada en procesos de indemnización y atención de siniestros, experiencia adquirida en compañías líderes del mercado. Posee un dominio integral de los ramos de subrogación en automóviles, seguros generales y transporte, así como amplia experiencia en la atención al cliente durante la gestión de siniestros, consolidada a través de los distintos cargos desempeñados a lo largo de su carrera. Cuenta con 25 años de experiencia en el sector asegurador y es fundadora y gerente general en DE LAVALLE ASESORÍAS Y ASISTENCIAS JURÍDICAS S.A.S., firma especializada en subrogaciones y reclamaciones derivadas de la responsabilidad civil.
-                    </p>
+                    <div class="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                        <p class="member-bio" id="bio-alexis">
+                            Abogada egresada de la Universidad Externado de Colombia, con sólida trayectoria técnica y jurídica en el ámbito asegurador, enfocada en procesos de indemnización y atención de siniestros...
+                            <span class="bio-more hidden">
+                                experiencia adquirida en compañías líderes del mercado. Posee un dominio integral de los ramos de subrogación en automóviles, seguros generales y transporte, así como amplia experiencia en la atención al cliente durante la gestión de siniestros, consolidada a través de los distintos cargos desempeñados a lo largo de su carrera. Cuenta con 25 años de experiencia en el sector asegurador y es fundadora y gerente general en DE LAVALLE ASESORÍAS Y ASISTENCIAS JURÍDICAS S.A.S., firma especializada en subrogaciones y reclamaciones derivadas de la responsabilidad civil.
+                            </span>
+                        </p>
+                        <button onclick="toggleBio('alexis')" class="read-more-btn mt-2 text-primary-700 dark:text-gold-400 hover:underline font-semibold text-xs flex items-center mx-auto gap-1">
+                            <span class="read-more-text">Leer más</span>
+                            <i data-lucide="chevron-down" class="w-4 h-4 read-more-icon"></i>
+                        </button>
+                    </div>
                     <div class="flex justify-center space-x-3">
                         <a href="#" class="w-8 h-8 bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900 rounded-full flex items-center justify-center transition-colors" aria-label="LinkedIn">
                             <i data-lucide="linkedin" class="w-4 h-4"></i>
@@ -469,6 +478,27 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Función para expandir/contraer biografías
+        function toggleBio(memberId) {
+            const bio = document.getElementById('bio-' + memberId);
+            const moreText = bio.querySelector('.bio-more');
+            const btn = bio.parentElement.querySelector('.read-more-btn');
+            const btnText = btn.querySelector('.read-more-text');
+            const btnIcon = btn.querySelector('.read-more-icon');
+            
+            if (moreText.classList.contains('hidden')) {
+                moreText.classList.remove('hidden');
+                btnText.textContent = 'Leer menos';
+                btnIcon.style.transform = 'rotate(180deg)';
+            } else {
+                moreText.classList.add('hidden');
+                btnText.textContent = 'Leer más';
+                btnIcon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
     
     <script src="./assets/js/main.js"></script>
 </body>

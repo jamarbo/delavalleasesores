@@ -1,12 +1,12 @@
 {
-    "name": "Delavalle Asesores",
-    "short_name": "Delavalle",
+    "name": "De Lavalle Asesorías y Asistencias Jurídicas",
+    "short_name": "De Lavalle",
     "description": "Asesoría y consultoría jurídica con cobertura nacional",
     "start_url": "/delavalleasesores/",
     "scope": "/delavalleasesores/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#2563eb",
+    "theme_color": "#D97706",
     "orientation": "portrait-primary",
     "lang": "es-CO",
     "dir": "ltr",
@@ -29,7 +29,7 @@
         {
             "name": "Contacto",
             "short_name": "Contacto",
-            "description": "Contactar a Delavalle Asesores",
+            "description": "Contactar a De Lavalle Asesores",
             "url": "/delavalleasesores/contacto.html",
             "icons": [
                 {
